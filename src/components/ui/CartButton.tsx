@@ -1,11 +1,13 @@
+import { BiCart } from "react-icons/bi";
+
 export const CartButton = () => {
 	return (
 		<>
-			<div className="">
-				<div>
-					<BiCart />
-				</div>
-			</div>
+			<button className="cart-button">
+				<BiCart />
+				<span>Cart</span>
+				<span>0</span>
+			</button>
 		</>
 	);
 };
