@@ -1,0 +1,63 @@
+:root {
+	--bg: #f5f3ef;
+	--border: #00000014;
+	--accent-red: #e63329;
+	--accent-orange: #d97706;
+	--text: #16120e;
+	--muted-1: #7a6f65;
+	--muted-2: #b8afa5;
+
+	--nav-h: 68px;
+	--sidebar-w: 260px;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Base */
+html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--text);
+	font-family: "Inter", sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Links */
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Images */
+img {
+	max-width: 100%;
+}
+
+/* Lists */
+ul,
+ol {
+	list-style: none;
+}
+
+/* Buttons */
+button {
+	cursor: pointer;
+	border: none;
+	background: none;
+	font: inherit;
+}
