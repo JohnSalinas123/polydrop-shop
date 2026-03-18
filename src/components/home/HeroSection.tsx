@@ -3,6 +3,7 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { RiArrowRightLine } from "react-icons/ri";
 
 import { placeholders } from "../../lib/dev/placeholders";
+import { SectionTag } from "../ui/SectionTag";
 
 const slides = [
 	{
@@ -84,13 +85,7 @@ export const HeroSection = () => {
 							}}
 						/>
 						<div className="slide-content">
-							<div className="slide-tag" style={{ color: slide.tagColor }}>
-								<span
-									className="slide-tag-line"
-									style={{ backgroundColor: slide.tagColor }}
-								></span>
-								{slide.tag}
-							</div>
+							<SectionTag color={slide.tagColor} text={slide.tag} />
 							<h1 className="slide-headline">
 								{slide.headline.map((line, i) => (
 									<span key={i}>
