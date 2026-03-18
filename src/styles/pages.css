@@ -1,0 +1,6 @@
+.hero {
+	position: relative;
+	padding: calc(var(--nav-h) + 24px) 80px 60px;
+	background-position: center;
+	background-size: cover;
+}

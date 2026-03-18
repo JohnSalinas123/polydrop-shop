@@ -7,6 +7,8 @@
 	--muted-1: #7a6f65;
 	--muted-2: #b8afa5;
 
+	--surface-1: #fff;
+
 	--nav-h: 68px;
 	--sidebar-w: 260px;
 }
@@ -30,6 +32,7 @@ body {
 	background-color: var(--bg);
 	color: var(--text);
 	font-family: "Inter", sans-serif;
+	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 }
 

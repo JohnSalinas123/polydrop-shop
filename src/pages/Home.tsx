@@ -1,3 +1,11 @@
+import { HeroSection } from "../components/home/HeroSection";
+
 export const Home = () => {
-	return <>HomePage</>;
+	return (
+		<>
+			<div>
+				<HeroSection />
+			</div>
+		</>
+	);
 };
