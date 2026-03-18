@@ -1,3 +1,7 @@
+:root {
+	--marquee-duration: 20s;
+}
+
 /* nav */
 nav {
 	display: flex;
@@ -294,6 +298,87 @@ nav ul {
 	background-color: var(--accent-red);
 	width: 40px;
 	box-shadow: 0 0 6px rgba(230, 51, 41, 0.4);
+}
+
+/* ---------------------------- */
+/* marquee */
+/* ---------------------------- */
+.marquee-item {
+	font-family: "Bebas Neue", sans-serif;
+	font-size: 13px;
+	letter-spacing: 0.3em;
+	color: var(--muted-2);
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 64px;
+	white-space: nowrap;
+}
+
+.marquee-item::after {
+	content: "◆";
+	font-size: 6px;
+	color: var(--accent-red);
+}
+
+.marquee-root {
+	display: flex;
+	overflow: hidden;
+	gap: 64px;
+	padding: 20px 0;
+	background-color: var(--surface-1);
+	border-top: 1px solid var(--border);
+	border-bottom: 1px solid var(--border);
+}
+
+.marquee-horizontal {
+	flex-direction: row;
+}
+.marquee-vertical {
+	flex-direction: column;
+}
+
+.marquee-inner {
+	display: flex;
+	flex-shrink: 0;
+	justify-content: space-around;
+	gap: 64px;
+}
+
+.marquee-inner--horizontal {
+	flex-direction: row;
+	animation: marquee-scroll var(--marquee-duration, 40s) linear infinite;
+}
+.marquee-inner--vertical {
+	flex-direction: column;
+	animation: marquee-scroll-vertical var(--marquee-duration, 40s) linear
+		infinite;
+}
+
+.marquee-reverse {
+	animation-direction: reverse;
+}
+.marquee-pause-on-hover:hover {
+	animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes marquee-scroll-vertical {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-100%);
+	}
 }
 
 /* footer */
