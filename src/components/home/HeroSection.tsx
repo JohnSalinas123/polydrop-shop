@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { RiArrowRightLine } from "react-icons/ri";
 
+import { placeholders } from "../../lib/dev/placeholders";
+
 const slides = [
 	{
-		imageURL: "https://placehold.co/1500x700/E8E4DE/FFF",
+		imageURL: placeholders.hero,
 		tag: "New Release — Vol. 04",
 		tagColor: "var(--accent-red)",
 		headline: ["ULTRA", "HARD", "SURFACE"],
@@ -15,7 +17,7 @@ const slides = [
 		],
 	},
 	{
-		imageURL: "https://placehold.co/1500x700/E8E4DE/FFF",
+		imageURL: placeholders.hero,
 		tag: "Organic Pack",
 		tagColor: "#f59e0b",
 		headline: ["NATURE", "& FLORA", "PACK"],
@@ -26,7 +28,7 @@ const slides = [
 		],
 	},
 	{
-		imageURL: "https://placehold.co/1500x700/E8E4DE/FFF",
+		imageURL: placeholders.hero,
 		tag: "Sci-Fi Series",
 		tagColor: "#7c3aed",
 		headline: ["VOID", "MECH", "SERIES"],
