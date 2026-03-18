@@ -300,6 +300,15 @@ nav ul {
 	box-shadow: 0 0 6px rgba(230, 51, 41, 0.4);
 }
 
+.hero-progress {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	background-color: var(--accent-red);
+	box-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+}
+
 /* ---------------------------- */
 /* marquee */
 /* ---------------------------- */

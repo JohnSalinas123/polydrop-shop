@@ -38,7 +38,7 @@ const slides = [
 	},
 ];
 
-const INTERVAL = 5500;
+const INTERVAL = 7500;
 
 export const HeroSection = () => {
 	const [current, setCurrent] = useState(0);
@@ -55,10 +55,9 @@ export const HeroSection = () => {
 
 	// progress bar
 	useEffect(() => {
-		const tick = setInterval(() => {
-			setProgress((prev) => Math.min(prev + 100 / (INTERVAL / 100), 100));
-		});
-		return () => clearInterval(tick);
+		setProgress(0);
+		const timer = setTimeout(() => setProgress(100), 50);
+		return () => clearTimeout(timer);
 	}, [current]);
 
 	const prev = () => {
@@ -68,6 +67,7 @@ export const HeroSection = () => {
 
 	const next = () => {
 		setCurrent((prev) => (prev + 1) % slides.length);
+		setProgress(0);
 	};
 
 	return (
@@ -120,41 +120,43 @@ export const HeroSection = () => {
 								</div>
 							))}
 						</div>
-
-						<div className="hero-controls">
-							<button className="hero-prev" onClick={prev}>
-								<IoIosArrowRoundBack />
-							</button>
-							<div className="hero-dots">
-								{slides.map((_, i) => (
-									<div
-										key={i}
-										className={`hero-dot ${i === current ? "active" : ""}`}
-										onClick={() => {
-											setCurrent(i);
-											setProgress(0);
-										}}
-									/>
-								))}
-							</div>
-							<button className="hero-next" onClick={next}>
-								<IoIosArrowRoundForward />
-							</button>
-						</div>
-
-						<div className="slide-number">
-							<span>{String(current + 1).padStart(2, "0")}</span> /
-							<span>{slides.length}</span>
-						</div>
-
-						<div className="hero-progress">
-							<div
-								className="hero-progress-bar"
-								style={{ width: `${progress}%` }}
-							/>
-						</div>
 					</div>
 				))}
+
+				<div className="hero-controls">
+					<button className="hero-prev" onClick={prev}>
+						<IoIosArrowRoundBack />
+					</button>
+					<div className="hero-dots">
+						{slides.map((_, i) => (
+							<div
+								key={i}
+								className={`hero-dot ${i === current ? "active" : ""}`}
+								onClick={() => {
+									setCurrent(i);
+									setProgress(0);
+								}}
+							/>
+						))}
+					</div>
+					<button className="hero-next" onClick={next}>
+						<IoIosArrowRoundForward />
+					</button>
+				</div>
+
+				<div className="slide-number">
+					<span>{String(current + 1).padStart(2, "0")}</span> /
+					<span>{slides.length}</span>
+				</div>
+
+				<div
+					className="hero-progress"
+					style={{
+						transition:
+							progress !== 0 ? `width ${INTERVAL - 200}ms linear` : "",
+						width: progress === 0 ? "0%" : "100%",
+					}}
+				/>
 			</section>
 		</>
 	);
