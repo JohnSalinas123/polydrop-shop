@@ -1,12 +1,9 @@
 interface SectionTagProps {
-    color: string;
-    text: string;
+	color: string;
+	text: string;
 }
 
-export const SectionTag = ({
-    color,
-    text
-}: SectionTagProps) => {
+export const SectionTag = ({ color, text }: SectionTagProps) => {
 	return (
 		<>
 			<div className="slide-tag" style={{ color: color }}>

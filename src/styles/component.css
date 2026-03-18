@@ -2,6 +2,15 @@
 	--marquee-duration: 20s;
 }
 
+/* sections */
+.section-title {
+	font-family: var(--font-bebas);
+	font-size: clamp(36px, 4vw, 56px);
+	letter-spacing: 0.04em;
+	color: var(--text);
+	line-height: 1;
+}
+
 /* nav */
 nav {
 	display: flex;
@@ -85,6 +94,11 @@ nav ul {
 	transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.slide .slide-tag {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
 .slide.active {
 	opacity: 1;
 	pointer-events: auto;
@@ -144,8 +158,6 @@ nav ul {
 	text-transform: uppercase;
 	letter-spacing: 0.35em;
 	margin-bottom: 20px;
-	opacity: 0;
-	transform: translateY(20px);
 	transition: all 0.6s 0.2s;
 }
 
@@ -371,7 +383,6 @@ nav ul {
 .marquee-root:hover .marquee-pause-on-hover {
 	animation-play-state: paused;
 }
-
 
 @keyframes marquee-scroll {
 	from {
