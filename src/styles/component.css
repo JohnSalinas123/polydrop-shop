@@ -368,9 +368,10 @@ nav ul {
 .marquee-reverse {
 	animation-direction: reverse;
 }
-.marquee-pause-on-hover:hover {
+.marquee-root:hover .marquee-pause-on-hover {
 	animation-play-state: paused;
 }
+
 
 @keyframes marquee-scroll {
 	from {

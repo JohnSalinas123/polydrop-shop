@@ -1,6 +1,5 @@
 import { HeroSection } from "../components/home/HeroSection";
 import { Marquee } from "../components/ui/Marquee";
-import { MarqueeItem } from "../components/ui/MarqueeItem";
 
 const marqueeItems = [
 	{ text: "Hard Surface" },
@@ -20,11 +19,7 @@ export const Home = () => {
 		<>
 			<div>
 				<HeroSection />
-				<Marquee>
-					{marqueeItems.map((item, i) => (
-						<MarqueeItem key={i} text={item.text} />
-					))}
-				</Marquee>
+				<Marquee items={marqueeItems} />
 			</div>
 		</>
 	);
