@@ -83,7 +83,11 @@ nav ul {
 	position: relative;
 	height: 72vh;
 	min-height: 520px;
+	max-width: none;
 	overflow: hidden;
+	padding: calc(var(--nav-h) + 24px) 80px 60px;
+	background-position: center;
+	background-size: cover;
 }
 
 .slide {
