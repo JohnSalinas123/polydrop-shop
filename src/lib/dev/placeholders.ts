@@ -52,8 +52,8 @@ export const recentDrops: Product[] = [
 		category: "Organic · Flora",
 		name: "ANCIENT BARK TREE",
 		specs: ["OBJ", "8K", "LODs"],
-		price: 1540,
-		salePrice: 2200,
+		price: 2200,
+		salePrice: 1540,
 	},
 	{
 		id: 4,
