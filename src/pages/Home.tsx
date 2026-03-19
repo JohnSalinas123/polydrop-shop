@@ -1,18 +1,8 @@
 import { HeroSection } from "../components/home/HeroSection";
+import { RecentDropsSection } from "../components/home/RecentDropsSection";
 import { Marquee } from "../components/ui/Marquee";
 
-const marqueeItems = [
-	{ text: "Hard Surface" },
-	{ text: "Organic Sculpts" },
-	{ text: "Sci-Fi Props" },
-	{ text: "Architecture" },
-	{ text: "Game Assets" },
-	{ text: "VFX Ready" },
-	{ text: "Blender Native" },
-	{ text: "Unreal Engine" },
-	{ text: "Unity Compatible" },
-	{ text: "PBR Textures" },
-];
+import { marqueeItems, recentDrops } from "../lib/dev/placeholders";
 
 export const Home = () => {
 	return (
@@ -20,6 +10,7 @@ export const Home = () => {
 			<div>
 				<HeroSection />
 				<Marquee items={marqueeItems} />
+				<RecentDropsSection items={recentDrops} />
 			</div>
 		</>
 	);

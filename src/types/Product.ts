@@ -1,10 +1,11 @@
-export interface Product {
+export type Product = {
 	id: number;
 	imageURL: string;
-	badge: "New" | "Hot" | "Sale" | null;
+	isNew: boolean;
+    isHot: boolean;
 	category: string;
 	name: string;
 	specs: string[];
 	price: number;
-	oldPrice: number | null;
-}
+	salePrice: number | null;
+};
