@@ -695,6 +695,54 @@ nav ul {
 }
 
 /* ---------------------------- */
+/* newsletter */
+/* ---------------------------- */
+.newsletter-section {
+	max-width: 1440px;
+	padding: 80px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 60px;
+	border-bottom: 1px solid var(--border);
+}
+
+.newsletter-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.newsletter-sub {
+	font-size: 14px;
+	color: var(--muted-1);
+	margin-top: 8px;
+}
+
+.newsletter-form {
+	display: flex;
+	gap: 0;
+	flex-shrink: 0;
+	width: 480px;
+}
+
+.newsletter-input {
+	flex: 1;
+	background-color: var(--surface-1);
+	border: 1px solid var(--border);
+	border-right: none;
+	color: var(--text);
+	font-family: var(--font-dm);
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	padding: 0px 20px;
+	outline: none;
+	transition: border-color 0.2s;
+}
+
+/* ---------------------------- */
 /* footer */
 /* ---------------------------- */
 footer {
