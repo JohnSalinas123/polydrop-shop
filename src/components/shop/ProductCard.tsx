@@ -57,7 +57,7 @@ export const ProductCard = ({
 							)}
 							{formatPrice(getActivePrice(product))}
 						</div>
-						<button className="product-cart-button">
+						<button className="product-add">
 							<BiCartAdd />
 						</button>
 					</div>
