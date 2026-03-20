@@ -694,10 +694,9 @@ nav ul {
 	gap: 16px;
 }
 
-.about-shop-button {
-}
-
+/* ---------------------------- */
 /* footer */
+/* ---------------------------- */
 footer {
 	padding: 64px 80px 40px;
 	background-color: var(--surface-1);
@@ -769,4 +768,38 @@ footer {
 .footer-col li:before {
 	content: "—";
 	font-size: 10px;
+}
+
+.footer-bottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-copy {
+	font-family: var(--font-dm);
+	font-size: 10px;
+	letter-spacing: 0.15em;
+	color: var(--muted-2);
+	text-transform: uppercase;
+}
+
+.footer-legal {
+	display: flex;
+	gap: 24px;
+}
+
+.footer-legal button {
+	font-family: var(--font-dm);
+	font-size: 10px;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: var(--muted-2);
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.footer-legal button:hover {
+	color: var(--muted-1);
 }
