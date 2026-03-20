@@ -1,3 +1,4 @@
+import { AboutBannerSection } from "../components/home/AboutBannerSection";
 import { HeroSection } from "../components/home/HeroSection";
 import { RecentDropsSection } from "../components/home/RecentDropsSection";
 import { Marquee } from "../components/ui/Marquee";
@@ -11,6 +12,7 @@ export const Home = () => {
 				<HeroSection />
 				<Marquee items={marqueeItems} />
 				<RecentDropsSection items={recentDrops} />
+				<AboutBannerSection />
 			</div>
 		</>
 	);
